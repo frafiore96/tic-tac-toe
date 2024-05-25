@@ -1,21 +1,27 @@
-# tic-tac-toe
+<a name="readme-top"></a>
 
-> Progetto Vue.js di Francesco Fiorentino
+# <h1>Tic Tac Toe</h1>
 
-## Build Setup
+<p>"Tic Tac Toe", conosciuto anche come "Tris" in Italia, è un gioco da tavolo per due giocatori. Si gioca su una griglia 3x3 dove i giocatori, a turno, collocano il proprio simbolo (solitamente "X" per il primo giocatore e "O" per il secondo) in una casella vuota. Lo scopo del gioco è allineare tre dei propri simboli in orizzontale, verticale o diagonale. <br>
+Puoi accedere all'app <a href="https://tictactoe-francescofiorentino.netlify.app">qui</a>.</p>
 
-``` bash
-# install dependencies
-npm install
+## Il gioco
 
-# serve with hot reload at localhost:8080
-npm run dev
+<a href="https://tictactoe-francescofiorentino.netlify.app"><img src="./src/assets/screenshot.png"></a>
 
-# build for production with minification
-npm run build
+<p align="right">(<a href="#readme-top">Torna su</a>)</p> 
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+## Tecnologie utilizzate
+- HTML
+- CSS
+- JavaScript
+- Vue
+- Intelligenza Artificiale (ChatGPT, Codeium) per debug
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+<p align="right">(<a href="#readme-top">Torna su</a>)</p> 
+
+## Contatti
+
+Francesco Fiorentino - [LinkedIn](https://www.linkedin.com/in/francesco-fiorentino-8a854216a/)
+
+<p align="right">(<a href="#readme-top">Torna su</a>)</p> 
