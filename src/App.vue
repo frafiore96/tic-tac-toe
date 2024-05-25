@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style> /*global*/
+<style> 
 #app {
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
