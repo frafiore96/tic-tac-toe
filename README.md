@@ -7,7 +7,7 @@ Puoi accedere all'app <a href="https://tictactoe-francescofiorentino.netlify.app
 
 ## Il gioco
 
-<a href="https://tictactoe-francescofiorentino.netlify.app"><img src=""></a>
+<a href="https://tictactoe-francescofiorentino.netlify.app"><img src="/public/screenshot.png"></a>
 
 <p align="right">(<a href="#readme-top">Torna su</a>)</p> 
 
