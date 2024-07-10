@@ -54,7 +54,7 @@ Questo approccio modulare permette di mantenere il codice organizzato e riutiliz
 <h2>Status.vue</h2>
 <p>Il file Status.vue è il componente utile a visualizzare il messaggio dello stato di gioco, ovvero il Turno del giocatore e il risultato della partita.
 La struttura è composta da tre sezioni principali: <br>
-- Template: definisce la struttura HTML, al suo interno troviamo il contenitore 'div' con classe .css ‘status’ e l’elemento <p> con il messaggio di stato legato alla prop ‘message’. Questo fornisce una struttura semplice per visualizzare il messaggio di stato del gioco in un modo ordinato e facilmente riutilizzabile, utilizzando ‘message’ per mostrare dinamicamente il messaggio di stato passato come prop. <br>
+- Template: definisce la struttura HTML, al suo interno troviamo il contenitore 'div' con classe .css ‘status’ e l’elemento con il messaggio di stato legato alla prop ‘message’. Questo fornisce una struttura semplice per visualizzare il messaggio di stato del gioco in un modo ordinato e facilmente riutilizzabile, utilizzando ‘message’ per mostrare dinamicamente il messaggio di stato passato come prop. <br>
 - Script: definisce la logica del componente, è presente export default necessario per l’importazione e il riutilizzo del componente <br>
 - Style: definisce gli stili CSS specifici del componente. <br>
 Questa configurazione permette al componente di essere riutilizzato in modo flessibile in diverse parti dell'applicazione, semplicemente passando un diverso messaggio di stato come prop.
