@@ -54,7 +54,7 @@ Questo approccio modulare permette di mantenere il codice organizzato e riutiliz
 <h2>Status.vue</h2>
 <p>Il file Status.vue è il componente utile a visualizzare il messaggio dello stato di gioco, ovvero il Turno del giocatore e il risultato della partita.
 La struttura è composta da tre sezioni principali: <br>
-- Template: definisce la struttura HTML, al suo interno troviamo il contenitore <div> con classe .css ‘status’ e l’elemento <p> con il messaggio di stato legato alla prop ‘message’. Questo fornisce una struttura semplice per visualizzare il messaggio di stato del gioco in un modo ordinato e facilmente riutilizzabile, utilizzando ‘message’ per mostrare dinamicamente il messaggio di stato passato come prop. <br>
+- Template: definisce la struttura HTML, al suo interno troviamo il contenitore 'div' con classe .css ‘status’ e l’elemento <p> con il messaggio di stato legato alla prop ‘message’. Questo fornisce una struttura semplice per visualizzare il messaggio di stato del gioco in un modo ordinato e facilmente riutilizzabile, utilizzando ‘message’ per mostrare dinamicamente il messaggio di stato passato come prop. <br>
 - Script: definisce la logica del componente, è presente export default necessario per l’importazione e il riutilizzo del componente <br>
 - Style: definisce gli stili CSS specifici del componente. <br>
 Questa configurazione permette al componente di essere riutilizzato in modo flessibile in diverse parti dell'applicazione, semplicemente passando un diverso messaggio di stato come prop.
@@ -64,7 +64,7 @@ Questa configurazione permette al componente di essere riutilizzato in modo fles
 <h2>Board.vue</h2>
 <p>Il file Board.vue è il componente utile a visualizzare e gestire la griglia del gioco
 La struttura è composta da tre sezioni principali:<br>
-- Template: definisce la struttura HTML, al suo interno troviamo il contenitore <div> con classe .css ‘board’ e il componente figlio "Cell", che rappresenta una cella della griglia, con ciclo v-for creiamo un componente cella per ogni cella in board, con :key=”index” otteniamo una chiave univoca per ogni elemento nel ciclo, basata su index, con :cell=”cell” definiamo la prop che passa il valore della cella (X,O,vuota), con :index=”index” la prop che passa l’indice della cella; <br>
+- Template: definisce la struttura HTML, al suo interno troviamo il contenitore 'div' con classe .css ‘board’ e il componente figlio "Cell", che rappresenta una cella della griglia, con ciclo v-for creiamo un componente cella per ogni cella in board, con :key=”index” otteniamo una chiave univoca per ogni elemento nel ciclo, basata su index, con :cell=”cell” definiamo la prop che passa il valore della cella (X,O,vuota), con :index=”index” la prop che passa l’indice della cella; <br>
 - Script: definisce la logica di ricezione dello stato della griglia come prop e di emissione di eventi quando una cella viene cliccata. Innanzitutto importiamo con import il componente Cell da utilizzare nel template, definiamo export default, necessario per importazione e il riutilizzo del componente, definendo name, components, props che il componente accetta, emits che specifica gli eventi che il componente emette ovvero “cellClicked” quando una cella viene cliccata, la funzione setup() per la CompositionAPI con handleCellClicked che emette l’evento ‘cellClicked’ con l’indice della cella cliccata; <br>
 - Style: definisce gli stili CSS specifici del componente.
 </p>
@@ -73,7 +73,7 @@ La struttura è composta da tre sezioni principali:<br>
 <h2>Cell.vue</h2>
 <p> il file Cell.vue è il componente che rappresenta un singolo elemento della griglia di gioco, ovvero la cella.
 La struttura è composta da tre sezioni principali: <br>
-- Template: definisce la struttura HTML, al suo interno troviamo il contenitore <div> con classe .css ‘cell’, @click=”handleClick” che chiama la funzione handleClick quando il div viene cliccato; :class=”cellClass” che lega dinamicamente le classi CSS in base al valore di ‘cellClass’; {{cell}} che visualizza il valore della cella che può essere X o O; <br>
+- Template: definisce la struttura HTML, al suo interno troviamo il contenitore 'div' con classe .css ‘cell’, @click=”handleClick” che chiama la funzione handleClick quando il div viene cliccato; :class=”cellClass” che lega dinamicamente le classi CSS in base al valore di ‘cellClass’; {{cell}} che visualizza il valore della cella che può essere X o O; <br>
 - Script: gestisce la logica della cella. All’interno troviamo import che importa la funzione ‘computed’ dalla CompositionApi di Vue, export default necessario per l’importazione il riutilizzo del componente, name e prop,  emits che specifica gli eventi che il componente emette: cellClicked è l’evento emesso quando la cella viene cliccata; la funzione setup() con ‘handleClick’, ovvero la funzione che emette l’evento cellClicked con l’indice della cella cliccata, e ‘cellClass’ che lega dinamicamente le classi CSS in base al valore di ‘cell’. <br>
 - Style: definisce gli stili CSS specifici del componente. 
 </p>
