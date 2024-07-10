@@ -37,19 +37,19 @@ La struttura è composta da tre sezioni principali:
 - Script: definisce la logica del componente. Inizialmente importiamo ‘ref’ e ‘computed’ dalla CompositionAPI di Vue e i componenti con import, è presente export default, necessario per l’importazione e il riutilizzo del componente, con setup() utilizziamo la CompositionAPI per definire lo stato e la logica del componente: troviamo le const ‘currentPlayer’ che tiene traccia del giocatore corrente (X,O), ‘board’ che rappresenta la griglia del gioco, inizialmente vuota, ‘winner’ che rappresenta il vincitore del gioco;  ‘statusMessage’: computed property che restituisce un messaggio di stato basato sullo stato del gioco; le funzioni cellClicked(): funzione che gestisce i click sulle celle della griglia, aggiorna lo stato del gioco e verifica se c'è un vincitore.; checkWinner(): funzione che verifica se c'è una combinazione vincente sulla griglia; resetGame(): funzione che resetta lo stato del gioco.
 - Style: definisce gli stili CSS specifici del componente.</p> <br>
 
-<h2> <strong>Header.vue</strong>
+<h2> Header.vue</h2>
 <p></p>
 
-<h2> <strong>Status.vue</strong>
+<h2>Status.vue</h2>
 <p></p>
 
-<h2> <strong>Board.vue</strong>
+<h2>Board.vue</h2>
 <p></p>
 
-<h2> <strong>Cell.vue</strong>
+<h2>Cell.vue</h2>
 <p></p>
 
-<h2> <strong>main.js</strong>
+<h2>main.js</h2>
 <p></p>
 
 ## Contatti
