@@ -30,7 +30,7 @@ La struttura dell'applicazione è composta come segue: <br>
 <p align="right">(<a href="#readme-top">Torna su</a>)</p>
 
 ## App.vue | Header.vue | Status.vue | Board.vue | Cell.vue | main.js
-<h2> <strong>App.vue</strong>
+<h2> App.vue</h2>
 <p>Il file App.vue è il componente principale dell'applicazione Tic Tac Toe, che funge da punto di ingresso per l'interfaccia utente.
 La struttura è composta da tre sezioni principali:
 - Template: definisce la struttura HTML, al suo interno troviamo l’elemento <div id=”app”> ovvero il contenitore principale del componente, gli altri componenti: <Header> che mostra l’intestazione dell’applicazione, <Status> che mostra il messaggio di stato del gioco, ovvero il turno del giocatore e il risultato della partita e passa la prop ‘statusMessage’ al componente, <Board> che mostra la griglia del gioco,passa la prop ‘board’ al componente e ascolta l’evento ‘cellClicked’;  il pulsante <button> per resettare il gioco, che con un clic chiama la funzione resetGame();
@@ -38,19 +38,53 @@ La struttura è composta da tre sezioni principali:
 - Style: definisce gli stili CSS specifici del componente.</p> <br>
 
 <h2> Header.vue</h2>
-<p></p>
+Il componente Header.vue è responsabile della visualizzazione dell'intestazione dell'applicazione Tic Tac Toe.
+La struttura è composta da tre sezioni principali:
+- Template: definisce la struttura HTML, al suo interno troviamo <header> e <h1>, tag utili per l’accessibilità e la SEO, fornendo una chiara indicazione del contenuto della pagina;
+- Script: definisce la logica del componente, è presente export default, necessario per l’importazione e il riutilizzo del componente;
+- Style: definisce gli stili CSS specifici del componente.
+Questo approccio modulare permette di mantenere il codice organizzato e riutilizzabile, facilitando la manutenzione e l'espansione dell'applicazione.</p>
 
 <h2>Status.vue</h2>
-<p></p>
+<p>Il file Status.vue è il componente utile a visualizzare il messaggio dello stato di gioco, ovvero il Turno del giocatore e il risultato della partita.
+La struttura è composta da tre sezioni principali:
+- Template: definisce la struttura HTML, al suo interno troviamo il contenitore <div> con classe .css ‘status’ e l’elemento <p> con il messaggio di stato legato alla prop ‘message’. Questo fornisce una struttura semplice per visualizzare il messaggio di stato del gioco in un modo ordinato e facilmente riutilizzabile, utilizzando ‘message’ per mostrare dinamicamente il messaggio di stato passato come prop.
+- Script: definisce la logica del componente, è presente export default necessario per l’importazione e il riutilizzo del componente
+- Style: definisce gli stili CSS specifici del componente.
+Questa configurazione permette al componente di essere riutilizzato in modo flessibile in diverse parti dell'applicazione, semplicemente passando un diverso messaggio di stato come prop.
+</p>
 
 <h2>Board.vue</h2>
-<p></p>
+<p>Il file Board.vue è il componente utile a visualizzare e gestire la griglia del gioco
+La struttura è composta da tre sezioni principali:
+- Template: definisce la struttura HTML, al suo interno troviamo il contenitore <div> con classe .css ‘board’ e il componente figlio <Cell>, che rappresenta una cella della griglia, con ciclo v-for creiamo un componente cella per ogni cella in board, con :key=”index” otteniamo una chiave univoca per ogni elemento nel ciclo, basata su index, con :cell=”cell” definiamo la prop che passa il valore della cella (X,O,vuota), con :index=”index” la prop che passa l’indice della cella;
+- Script: definisce la logica di ricezione dello stato della griglia come prop e di emissione di eventi quando una cella viene cliccata. Innanzitutto importiamo con import il componente Cell da utilizzare nel template, definiamo export default, necessario per importazione e il riutilizzo del componente, definendo name, components, props che il componente accetta, emits che specifica gli eventi che il componente emette ovvero “cellClicked” quando una cella viene cliccata, la funzione setup() per la CompositionAPI con handleCellClicked che emette l’evento ‘cellClicked’ con l’indice della cella cliccata;
+- Style: definisce gli stili CSS specifici del componente.
+</p>
 
 <h2>Cell.vue</h2>
-<p></p>
+<p> il file Cell.vue è il componente che rappresenta un singolo elemento della griglia di gioco, ovvero la cella.
+La struttura è composta da tre sezioni principali:
+- Template: definisce la struttura HTML, al suo interno troviamo il contenitore <div> con classe .css ‘cell’, @click=”handleClick” che chiama la funzione handleClick quando il div viene cliccato; :class=”cellClass” che lega dinamicamente le classi CSS in base al valore di ‘cellClass’; {{cell}} che visualizza il valore della cella che può essere X o O;
+- Script: gestisce la logica della cella. All’interno troviamo import che importa la funzione ‘computed’ dalla CompositionApi di Vue, export default necessario per l’importazione il riutilizzo del componente, name e prop,  emits che specifica gli eventi che il componente emette: cellClicked è l’evento emesso quando la cella viene cliccata; la funzione setup() con ‘handleClick’, ovvero la funzione che emette l’evento cellClicked con l’indice della cella cliccata, e ‘cellClass’ che lega dinamicamente le classi CSS in base al valore di ‘cell’.
+- Style: definisce gli stili CSS specifici del componente.
+</p>
 
 <h2>main.js</h2>
-<p></p>
+<p>
+E il file .js principale , essenziale per configurare e inizializzare correttamente un applicazione Vue.
+All’interno troviamo:
+- Importazione del file main.css contenente gli stili globali da applicare a tutta l’applicazione;
+- Importazione di ‘createApp’ che crea un’applicazione Vue;
+- Importazione del componente principale App.vue;
+- Creazione e montaggio dell’app Vue:
+createApp(App) crea un anuova istanza utilizzando il componente ‘App’ come componente root;
+.mount(‘#app’) monta l’app sull’elemento DOM con l’id=”app”.
+Questo significa che il contenuto di ‘App.vue’ verrà inserito in index.html nel
+<div id=”app”></div>
+</p>
+
+<p align="right">(<a href="#readme-top">Torna su</a>)</p> 
 
 ## Contatti
 
